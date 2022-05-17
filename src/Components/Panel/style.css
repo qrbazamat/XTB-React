@@ -1,0 +1,17 @@
+.Panel {
+	background-color: #F2F6FC;
+	border-radius: 10px;
+	margin: 5px 0;
+}
+
+.Panel:first-child {
+	margin-top: 0;
+}
+
+.Panel:last-child {
+	margin-bottom: 0;
+}
+
+.Panel > * {
+	border-radius: inherit;
+}

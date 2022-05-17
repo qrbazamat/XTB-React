@@ -1,0 +1,222 @@
+:root {
+	--box-margin: 10px;
+	--icon-size: 25px;
+}
+
+html,
+body {
+	overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+h1, .h1 {
+	font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+	h1, .h1 {
+	  font-size: 2.5rem;
+	}
+}
+  
+  h2, .h2 {
+	font-size: calc(1.325rem + 0.9vw);
+  }
+  @media (min-width: 1200px) {
+	h2, .h2 {
+	  font-size: 2rem;
+	}
+  }
+  
+  h3, .h3 {
+	font-size: calc(1.3rem + 0.6vw);
+  }
+  @media (min-width: 1200px) {
+	h3, .h3 {
+	  font-size: 1.75rem;
+	}
+  }
+  
+  h4, .h4 {
+	font-size: calc(1.275rem + 0.3vw);
+  }
+  @media (min-width: 1200px) {
+	h4, .h4 {
+	  font-size: 1.5rem;
+	}
+  }
+  
+  h5, .h5 {
+	font-size: 1.25rem;
+  }
+  
+  h6, .h6 {
+	font-size: 1rem;
+  }
+  
+  p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+  }
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+
+.main-background {
+	background: #AEC4EB;
+	width: 100%;
+	height: 100vh;
+	padding: 20px;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+	.main-background {
+		padding-bottom: 100px;
+	}
+}
+
+i.icon {
+	vertical-align: middle;
+	display: inline-block;
+	width: var(--icon-size);
+	height: var(--icon-size);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: left top;
+          mask-position: left top;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+          mask-mode: luminance;
+}
+
+i.icon.white-icon {
+	background-color: #ffffff;
+}
+
+i.icon.black-icon {
+	background-color: #000000;
+}
+
+i.icon.green-icon {
+	background-color: #0ea71b;
+}
+
+i.icon.open-outline {
+	-webkit-mask-image: url(./Components/Images/icons/open-outline.svg);
+          mask-image: url(./Components/Images/icons/open-outline.svg);
+}
+
+i.icon.people-outline {
+	-webkit-mask-image: url(./Components/Images/icons/people-outline.svg);
+          mask-image: url(./Components/Images/icons/people-outline.svg);
+}
+
+i.icon.eye-outline {
+	-webkit-mask-image: url(./Components/Images/icons/eye-outline.svg);
+   	      mask-image: url(./Components/Images/icons/eye-outline.svg);
+}
+
+i.icon.flag-outline {
+	-webkit-mask-image: url(./Components/Images/icons/flag-outline.svg);
+   	      mask-image: url(./Components/Images/icons/flag-outline.svg);
+}
+
+i.icon.lock-closed-outline {
+	-webkit-mask-image: url(./Components/Images/icons/lock-closed-outline.svg);
+   	      mask-image: url(./Components/Images/icons/lock-closed-outline.svg);
+}
+
+i.icon.paper-plane-outline {
+	-webkit-mask-image: url(./Components/Images/icons/paper-plane-outline.svg);
+   	      mask-image: url(./Components/Images/icons/paper-plane-outline.svg);
+}
+
+i.icon.logo-facebook {
+	-webkit-mask-image: url(./Components/Images/icons/logo-facebook.svg);
+   	      mask-image: url(./Components/Images/icons/logo-facebook.svg);
+}
+
+i.icon.logo-instagram {
+	-webkit-mask-image: url(./Components/Images/icons/logo-instagram.svg);
+   	      mask-image: url(./Components/Images/icons/logo-instagram.svg);
+}
+
+i.icon.refresh-outline {
+	-webkit-mask-image: url(./Components/Images/icons/refresh-outline.svg);
+   	      mask-image: url(./Components/Images/icons/refresh-outline.svg);
+}
+
+i.icon.home-outline {
+	-webkit-mask-image: url(./Components/Images/icons/home-outline.svg);
+   	      mask-image: url(./Components/Images/icons/home-outline.svg);
+}
+
+i.icon.location-outline {
+	-webkit-mask-image: url(./Components/Images/icons/location-outline.svg);
+   	      mask-image: url(./Components/Images/icons/location-outline.svg);
+}
+
+i.icon.call-outline {
+	-webkit-mask-image: url(./Components/Images/icons/call-outline.svg);
+   	      mask-image: url(./Components/Images/icons/call-outline.svg);
+}
+
+i.icon.help-circle-outline {
+	-webkit-mask-image: url(./Components/Images/icons/help-circle-outline.svg);
+   	      mask-image: url(./Components/Images/icons/help-circle-outline.svg);
+}
+
+i.icon.checkmark-done-outline {
+	-webkit-mask-image: url(./Components/Images/icons/checkmark-done-outline.svg);
+   	      mask-image: url(./Components/Images/icons/checkmark-done-outline.svg);
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+	overflow: hidden;
+  }
+  
+  .section-bg {
+	background-color: #f8fbfe;
+  }
+  
+  .section-title {
+	text-align: center;
+	padding-bottom: 30px;
+  }
+  .section-title h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	color: #124265;
+  }
+  .section-title p {
+	margin-bottom: 0;
+	font-size: 14px;
+	color: #919191;
+  }
