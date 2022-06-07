@@ -15,3 +15,5 @@ const PostMenu = () => {
         </div>
     )
 }
+
+export default PostMenu
