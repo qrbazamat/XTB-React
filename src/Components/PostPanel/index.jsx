@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Pagination from '../Pagination'
-import postsData from '../Data'
-import { timeFormat, viewsCountFormat } from '../TimeCountUtil'
+import postsData from '../util/Data'
+import { timeFormat, viewsCountFormat } from '../util/TimeCountUtil'
 import './style.css'
 
 const pageLimit = 10
@@ -37,6 +37,7 @@ const PostPanel = () => {
     const handleClickCloseModal = () => {
         const postModalElement = ref.current
         const { x, y } = modalPos
+        console.log(x, y);
         setIsOpenModal(false)
 
         postModalElement.classList.remove('open')
@@ -51,11 +52,12 @@ const PostPanel = () => {
 
     useEffect(() => {
         document.onkeyup = e => {
-            if (e.key === 'Escape') {
+            console.log('faqat birinchi martta', modalPos);
+            if (isOpenModal && e.key === 'Escape') {
                 handleClickCloseModal()
             }
         }
-    }, [])
+    }, [isOpenModal])
 
     useEffect(() => {
         const posts = []
@@ -70,7 +72,6 @@ const PostPanel = () => {
         setPageablePosts(posts)
     }, [pagination])
 
-    console.log(isOpenModal);
     return (
         <div className="post-panel">
             <div className="posts-wrapper">
@@ -112,8 +113,9 @@ const PostPanel = () => {
             </div>
 
             <Pagination
-                count={Math.ceil(postsData.length / 10)}
+                count={Math.ceil(postsData.length / pageLimit)}
                 currentPage={pagination}
+                handlePagination={handlePagination}
             />
 
             <div

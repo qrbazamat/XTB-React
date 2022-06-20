@@ -9,6 +9,18 @@ const defaultClass = pagClass + 'indigo-600 border-r-0 bg-white hover:bg-indigo-
 const activeClass = pagClass + 'white border-r-0 bg-indigo-600'
 
 const Pagination = ({ count, currentPage = 1, handlePagination }) => {
+    const prevHandleClick = () => {
+        if(currentPage > 1) {
+            handlePagination(currentPage - 1)
+        }
+    }
+
+    const nextHandleClick = () => {
+        if(currentPage < count) {
+            handlePagination(currentPage + 1)
+        }
+    }
+
     return (
         <nav
             aria-label="Page navigation"
@@ -23,6 +35,7 @@ const Pagination = ({ count, currentPage = 1, handlePagination }) => {
                 <li className="prev" >
                     <button
                         className={prevClass}
+                        onClick={prevHandleClick}
                     >
                         &lt;
                     </button>
@@ -46,6 +59,7 @@ const Pagination = ({ count, currentPage = 1, handlePagination }) => {
                 <li className="next" >
                     <button
                         className={nextClass}
+                        onClick={nextHandleClick}
                     >
                         &gt;
                     </button>
